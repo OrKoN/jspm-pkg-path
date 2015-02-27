@@ -17,7 +17,6 @@ module.exports = function (name, options) {
     packagePattern = baseURL + '/jspm_packages/' + packageDefinition
       .replace(':', '/')
       .replace(versionPart, '*');
-
   }
 
   var matches = glob.sync(packagePattern);
