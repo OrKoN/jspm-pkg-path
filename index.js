@@ -2,7 +2,7 @@ var glob = require("glob");
 
 module.exports = function (name, options) {
   options = options || {
-    packageJsonPath: './package.json'
+    packageJsonPath: '../../package.json'
   }
   var pkg = require(options.packageJsonPath);
   var packageDefinition = pkg.jspm.dependencies[name];
