@@ -6,12 +6,15 @@ module.exports = function (name, options) {
   }
   var pkg = require(options.packageJsonPath);
   var packageDefinition = pkg.jspm.dependencies[name];
+
+  var baseURL = pkg.jspm.directories.baseURL || '.';
+
   var packagePattern = '';
   if (packageDefinition.indexOf('@') === -1) {
-    packagePattern = packageDefinition + '*';
+    packagePattern = baseURL + '/jspm_packages/' + packageDefinition + '*';
   } else {
     var versionPart = packageDefinition.substring(packageDefinition.indexOf('@'));
-    packagePattern = 'app/jspm_packages/' + packageDefinition
+    packagePattern = baseURL + '/jspm_packages/' + packageDefinition
       .replace(':', '/')
       .replace(versionPart, '*');
 
