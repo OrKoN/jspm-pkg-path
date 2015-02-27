@@ -1,0 +1,28 @@
+{
+  "name": "jspm-pkg-path",
+  "version": "1.0.0",
+  "description": "Resolve jspm the package name to the local file path if the package is defined in package.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OrKoN/jspm-pkg-path.git"
+  },
+  "keywords": [
+    "jspm",
+    "path",
+    "by",
+    "name"
+  ],
+  "author": "Oleksii Rudenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OrKoN/jspm-pkg-path/issues"
+  },
+  "homepage": "https://github.com/OrKoN/jspm-pkg-path",
+  "dependencies": {
+    "glob": "^4.4.1"
+  }
+}
