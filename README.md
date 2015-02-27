@@ -14,4 +14,11 @@ By default looks up `../../package.json`.
   var path = jpath('<packageName>');
 ```
 
+```
+  var jpath = require('jspm-pkg-path');
+  var path = jpath('<packageName>', {
+    packageJsonPath: '../../package.json'
+  });
+```
+
 
