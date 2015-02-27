@@ -1,6 +1,6 @@
 {
   "name": "jspm-pkg-path",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Resolve jspm the package name to the local file path if the package is defined in package.json",
   "main": "index.js",
   "scripts": {
