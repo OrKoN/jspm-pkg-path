@@ -1,4 +1,5 @@
-var glob = require("glob");
+var glob = require('glob');
+var S = require('string');
 
 module.exports = function (name, options) {
   options = options || {
@@ -24,6 +25,16 @@ module.exports = function (name, options) {
     console.log('Error: `' + name + '` package is not installed.');
     return;
   }
+
+  matches = matches.filter(function (item) {
+    return !S(item).endsWith('.js');
+  });
+
+  matches.sort(function(a, b){
+      if(a < b) return 1;
+      if(a > b) return -1;
+      return 0;
+  })
 
   return matches[0];
 };
